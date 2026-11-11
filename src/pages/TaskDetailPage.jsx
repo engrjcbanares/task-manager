@@ -12,8 +12,8 @@ function BackLink() {
 }
 
 function TaskDetailPage() {
-  const { taskId } = useParams()
-  const { data: task, isPending, isError, error } = useTodo(taskId)
+  const { id } = useParams()
+  const { data: task, isPending, isError, error } = useTodo(id)
 
   if (isPending) return <StatusMessage title="Loading task..." />
 

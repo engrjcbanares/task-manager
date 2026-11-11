@@ -7,9 +7,9 @@ export async function fetchTodos() {
   return data.todos
 }
 
-export async function fetchTodo(taskId) {
-  const res = await fetch(`${BASE_URL}/${encodeURIComponent(taskId)}`)
-  if (res.status === 404) throw new Error(`Task "${taskId}" does not exist.`)
+export async function fetchTodo(id) {
+  const res = await fetch(`${BASE_URL}/${encodeURIComponent(id)}`)
+  if (res.status === 404) throw new Error(`Task "${id}" does not exist.`)
   if (!res.ok) throw new Error('Could not load this task. Please try again.')
   return res.json()
 }

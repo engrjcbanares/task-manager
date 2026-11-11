@@ -5,9 +5,9 @@ export function useTodos() {
   return useQuery({ queryKey: ['todos'], queryFn: fetchTodos })
 }
 
-export function useTodo(taskId) {
+export function useTodo(id) {
   return useQuery({
-    queryKey: ['todos', taskId],
-    queryFn: () => fetchTodo(taskId),
+    queryKey: ['todos', id],
+    queryFn: () => fetchTodo(id),
   })
 }

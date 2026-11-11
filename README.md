@@ -10,7 +10,7 @@ A multi-page task and productivity manager built with React. It shows a summary 
 | --- | --- |
 | `/` | Home: totals for all, open and done tasks, plus the next three open tasks |
 | `/tasks` | Task list with a search box and an All / Open / Done filter |
-| `/tasks/:taskId` | Task detail: reads `taskId` from the URL and shows the matching task |
+| `/tasks/:id` | Task detail: reads `id` from the URL and shows the matching task |
 | `*` | Not found page for any other address |
 
 ### Public API
@@ -25,7 +25,7 @@ Data comes from [DummyJSON](https://dummyjson.com/docs/todos):
 All server data is fetched with `useQuery`, wrapped in two small hooks in `src/hooks/useTodos.js`:
 
 - `useTodos()` uses the query key `['todos']`. The home page and the task list share it, so the list is fetched once and served from the cache.
-- `useTodo(taskId)` uses the query key `['todos', taskId]`, so every task is cached separately.
+- `useTodo(id)` uses the query key `['todos', id]`, so every task is cached separately.
 
 Loading and error handling come from the query result (`isPending`, `isError`, `error`), not from hand-written state. `useState` is only used for the search text and status filter on the task list page.
 

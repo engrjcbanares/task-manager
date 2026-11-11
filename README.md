@@ -79,4 +79,4 @@ React, React Router, TanStack Query, Tailwind CSS, Vite.
 
 ## Live demo
 
-https://task-manager-chi-inky-75.vercel.app
+https://taskglance.vercel.app

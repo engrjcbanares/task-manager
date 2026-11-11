@@ -77,6 +77,6 @@ Other commands:
 
 React, React Router, TanStack Query, Tailwind CSS, Vite.
 
-## Live demo (stretch)
+## Live demo
 
-Not deployed.
+https://task-manager-chi-inky-75.vercel.app
